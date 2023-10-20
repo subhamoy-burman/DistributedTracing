@@ -10,12 +10,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Add OpenTelemetry Tracing
-builder.Services.AddApplicationInsightsTelemetry("");
+builder.Services.AddApplicationInsightsTelemetry("<insert>");
 
 var app = builder.Build();
 
 #if DEBUG
-// Configure the HTTP request pipeline.
+//Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
